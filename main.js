@@ -18,7 +18,7 @@ $(function () {
 
   stage.addChild(makeBackground('grass.png'))
   // stage.addChild(makeCircle())
-  stage.addChild(makeJar())
+  // stage.addChild(makeJar())
   stage.addChild(player.sprite)
 
   createjs.Ticker.framerate = 60
@@ -63,10 +63,8 @@ function makeJar () {
 
 function makeBackground (img) {
   var bg = new createjs.Bitmap(img)
-  var temp = new Image()
-  temp.src = img
-  bg.x = temp.width / 2
-  bg.y = temp.height / 2
+  bg.scaleX = 2
+  bg.scaleY = 2
   return bg
 }
 
